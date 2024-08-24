@@ -4,8 +4,8 @@
 <body>
    <div id="prpc_" class="faculty-bio">
     <div class="container">
-     <div class="row">
-      <div class="col-md-7 order-2 order-md-1">
+     
+      <div id="first">
        <h1>Abhijeet Rane</h1>
        <h2 class="faculty-sub-header">Software Engineering Manager at   <a href="https://insolutionsglobal.com/">In Solutions Global Ltd</a></h2>
        <div class="accordion accordion-preview mt-3" id="prpc_-faculty-bio-accordion">
@@ -26,19 +26,16 @@ and AWS cloud</p>
          <h3 class="collapsible-header">Education</h3>
          <div class="collapse show" id="prpc_-collapse-1" aria-labelledby="prpc_-card-header-1" aria-expanded="false">
           <div class="card-body p-0">
-           <p>B.E,(Bachelor of Engineering) Information Technology, 2003 at University of Mumbai,Vidyavardhini College of Engineering and Technology (VCET), India <br> M.S,(Master of Science) Computer Science, 2006 at Marist College,Poughkeepsie,New York,USA</p>
+           <p>B.E,(Bachelor of Engineering) Information Technology, 2003 at University of Mumbai,Vidyavardhini College of Engineering and Technology<br> M.S,(Master of Science) Computer Science, 2006 at Marist College,Poughkeepsie,New York,USA</p>
           </div>
          </div>
         </div>
-        <hr>
-        
-        <hr>
- 
-        
-      
+		</div>
+		</div>
+				
+       <div id="second">
        
-      <div class="col-md-5 order-1 order-md-2 contact-col d-flex align-items-start mb-4">
-       <div class="contact-info d-inline-block"><picture data-fileentryid="206166">
+	   <div class="contact-info d-inline-block"><picture data-fileentryid="206166">
          <source media="(max-width:300px)" srcset="./images/Abhijeet_Rane_jpg.jpg">
          <source media="(max-width:355px) and (min-width:300px)" srcset="./images/Abhijeet_Rane_jpg.jpg">
          <img class="img-fluid w-100" src="./images/Abhijeet_Rane_jpg.jpg" alt="">
@@ -51,11 +48,32 @@ and AWS cloud</p>
          <h4 class="mt-2 mb-0">Resume</h4> <span class="contact-details-text"><a href="./resume/abhijeet_rane_resume_pdf.pdf" target="_blank" rel="noopener noreferrer">Abhijeet Rane Resume</a></span>
         </div>
        </div>
+	   </div>	   
       </div>
-     </div>
-    
+	 </div> 
+     
    
    <style>
+   #header {
+    width: 100%;
+    background-color: red;
+}
+
+#first {
+    width: 70%;
+    float: left;
+    height: 300px;
+ }
+#second {
+    width: 30%;
+    float: left;
+    height: 300px; 
+}
+#clear {
+    clear: both;
+}
+   
+   
     #prpc_.faculty-bio .contact-info {
         width: 380px;
         max-width: 100%;
