@@ -1,0 +1,69 @@
+<html>
+<head>
+<script>
+   let beginFlag = 0;
+   const matrixValue = [-1,-2,-3,-4,-5,-6,-7,-8,-9];    
+   function onSelectionByGamer(x,y,z){
+      console.log('x='+x,'y='+y+'z='+z+'beginFlag='+beginFlag);      
+      if(beginFlag == 0){
+         beginFlag = 1;
+         document.getElementById(z).src='./images/cross.jpg';
+         checkGameStatus(z,0);      
+      }else if(beginFlag == 1){
+         beginFlag = 0;
+         document.getElementById(z).src='./images/circle.jpg';      
+         checkGameStatus(z,1);
+      }
+      
+   }
+   function checkGameStatus(x,y){
+      matrixValue[x]=y;
+      console.log(matrixValue[0]);
+      console.log(matrixValue[1]);
+      console.log(matrixValue[2]);
+      console.log(matrixValue[3]);
+      console.log(matrixValue[4]);
+      console.log(matrixValue[5]);
+      console.log(matrixValue[6]);
+      console.log(matrixValue[7]);
+      console.log(matrixValue[8]);
+
+      if((matrixValue[0] == 0 && matrixValue[1] == 0 && matrixValue[2] == 0)
+       ||(matrixValue[0] == 0 && matrixValue[3] == 0 && matrixValue[6] == 0)
+       ||(matrixValue[0] == 0 && matrixValue[4] == 0 && matrixValue[8] == 0)
+       ||(matrixValue[1] == 0 && matrixValue[4] == 0 && matrixValue[7] == 0)
+       ||(matrixValue[2] == 0 && matrixValue[5] == 0 && matrixValue[8] == 0)
+       ||(matrixValue[3] == 0 && matrixValue[4] == 0 && matrixValue[5] == 0)
+       ||(matrixValue[6] == 0 && matrixValue[7] == 0 && matrixValue[8] == 0)
+       ||(matrixValue[2] == 0 && matrixValue[4] == 0 && matrixValue[6] == 0)
+       ){
+         alert("Cross won the Game");
+        }
+        if((matrixValue[0] == 1 &&  matrixValue[1] == 1 &&  matrixValue[2] == 1)
+         ||(matrixValue[0] == 1 &&  matrixValue[3] == 1 &&  matrixValue[6] == 1)
+         ||(matrixValue[0] == 1 &&  matrixValue[4] == 1 &&  matrixValue[8] == 1)
+         ||(matrixValue[1] == 1 &&  matrixValue[4] == 1 &&  matrixValue[7] == 1)
+         ||(matrixValue[2] == 1 &&  matrixValue[5] == 1 &&  matrixValue[8] == 1)
+         ||(matrixValue[3] == 1 &&  matrixValue[4] == 1 &&  matrixValue[5] == 1)
+         ||(matrixValue[6] == 1 &&  matrixValue[7] == 1 &&  matrixValue[8] == 1)
+         ||(matrixValue[2] == 1 &&  matrixValue[4] == 1 &&  matrixValue[6] == 1)
+      ){
+         alert("Circle won the Game");
+        }  
+   }
+</script>
+</head>
+<body>
+<table>
+   <tr>
+    <td><image id="0" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(0,0,0)"></image></td><td><image id="1" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(0,1,1)"></image></td><td><image id="2" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(0,2,2)"></image></td> 
+   </tr>
+   <tr>
+    <td><image id="3" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(1,0,3)"></image></td><td><image id="4" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(1,1,4)"></image></td><td><image id="5" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(1,2,5)"></image></td> 
+   </tr>
+   <tr>
+    <td><image id="6" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(2,0,6)"></image></image></td><td><image id="7" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(2,1,7)"></image></td><td><image id="8" src="./images/emptyCell.jpg" onclick="onSelectionByGamer(2,2,8)"></image> </td> 
+   </tr>
+</table>
+</body>
+</html>
